@@ -4,7 +4,8 @@
   "description": "Study Publishing With SCSS",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -wr styles/main.scss  ./style.css"
+    "sass": "node-sass -wr styles/main.scss ./style.css",
+    "lint:css": "stylelint \"**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,14 @@
   "homepage": "https://github.com/tmdals9974/studySCSS#readme",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0"
   }
 }

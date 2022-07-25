@@ -1,0 +1,15 @@
+{
+  // 자동 포맷팅
+  // 모든 린팅 & 포맷팅이 동시 작동하여 충돌날 수 있음
+  // 해당 프로젝트에선 stylelint와 prettier를 통합하여 충돌나지 않음
+  // 해당 옵션을 끄고 codeActionsOnSave만 킬 경우, css/scss 파일에서만 저장 시 포맷팅이 됨.
+  // 해당 옵션으로 기타 파일의 포맷팅도 설정 한 것.
+  "editor.formatOnSave": true,
+
+  // 파일 저장 시 자동 린팅 & 포맷팅
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+
+  "files.eol": "\n"
+}
