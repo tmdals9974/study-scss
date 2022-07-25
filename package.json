@@ -4,6 +4,7 @@
   "description": "Study Publishing With SCSS",
   "main": "index.js",
   "scripts": {
+    "sass": "node-sass -wr styles/main.scss  ./style.css"
   },
   "repository": {
     "type": "git",
@@ -16,4 +17,7 @@
     "url": "https://github.com/tmdals9974/studySCSS/issues"
   },
   "homepage": "https://github.com/tmdals9974/studySCSS#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
