@@ -6,6 +6,9 @@
 
 - [피그마 매뉴얼](docs/FigmaManual.md)
 - [이미지 확장자](docs/ImageExtension.md)
+- [아이콘 폰트](docs/IconFont.md)
+- [파비콘 생성](docs/GenerateFavicon.md)
+- [CSS 리셋](docs/ResetCSS.md)
 
 ## 참고 자료
 
