@@ -1,0 +1,28 @@
+/*
+* MOBILE (< 768px) -----------------------------------------------------
+* # of columns                4
+* gutter                      20px
+* margin                      5px
+* container-size              100% - (margin * 2)
+* unit                        container-size / column-length - gutter
+*/
+
+/*
+* TABLET (>= 768px) -----------------------------------------------------
+* # of columns                12
+* gutter                      20px
+* margin                      30px
+* container-size              100% - (margin * 2)
+* max-container-size          960px
+* unit                        container-size / column-length - gutter
+*/
+
+/*
+* DESKTOP (>= 1200px) -----------------------------------------------------
+* # of columns                12
+* gutter                      20px
+* margin                      auto
+* container-size              1140px
+* max-container-size          1140px
+* unit                        75px
+*/
