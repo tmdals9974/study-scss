@@ -5,6 +5,7 @@
     "max-line-length": 120,
     "prettier/prettier": true,
     "scss/no-global-function-names": null,
+    "scss/at-rule-conditional-no-parentheses": null,
 
     "alpha-value-notation": "number",
     "at-rule-empty-line-before": null,
@@ -23,7 +24,7 @@
       }
     ],
     "block-closing-brace-newline-after": [
-      "always-multi-line",
+      "always-single-line",
       {
         "severity": "warning"
       }
