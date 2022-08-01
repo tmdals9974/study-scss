@@ -6,6 +6,7 @@
     "prettier/prettier": true,
     "scss/no-global-function-names": null,
     "scss/at-rule-conditional-no-parentheses": null,
+    "scss/double-slash-comment-empty-line-before": null,
 
     "alpha-value-notation": "number",
     "at-rule-empty-line-before": null,
@@ -182,7 +183,6 @@
     "scss/dollar-variable-colon-space-after": "always",
     "scss/dollar-variable-first-in-block": true,
     "scss/dollar-variable-pattern": "^.[a-z]+(-[a-z0-9])*",
-    "scss/double-slash-comment-empty-line-before": "always",
     "scss/no-duplicate-mixins": true,
     "scss/operator-no-unspaced": true,
     "scss/percent-placeholder-pattern": "^.[a-z]+(-[a-z0-9])*"
