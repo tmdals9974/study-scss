@@ -51,9 +51,9 @@ $lg-unit: 75px;
 $lg-max-container: ($lg-unit + $gutter) * $lg-columns; // unit + gutter = column-size
 
 .container {
-  width: 100%;
-  padding: 0 $sm-margin;
   margin: 0 auto; // 화면이 넓어졌을 경우, 중앙 정렬 되고 좌우 자동 마진을 주기 위함임.
+  padding: 0 $sm-margin;
+  width: 100%;
 
   .row {
     display: flex;
