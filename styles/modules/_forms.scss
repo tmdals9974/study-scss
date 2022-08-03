@@ -1,0 +1,81 @@
+%form-base {
+  @include text-style(16);
+  appearance: none;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  display: block;
+  height: 40px;
+  padding: 0 16px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+
+  &::placeholder {
+    color: $tertiary;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $background;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+// ? Select
+.select-group {
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: $blue;
+    }
+
+    .ic-caret {
+      color: $blue;
+    }
+  }
+
+  .form-select {
+    // 글자 길이 조절
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .ic-caret {
+    @include pos-center-y;
+    color: $tertiary;
+    font-size: 24px;
+
+    /*
+     * pointer-events
+     * select 는 position이 static이여서, ic-caret이 좀 더 위에 있게되어,
+     * ic-caret 위에선 select 이벤트가 아무것도 동작하지 않게되어 추가.
+     */
+    pointer-events: none;
+    right: 8px;
+  }
+}
+
+// ? Input
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .ic-search {
+    @include pos-center-y;
+    color: $secondary;
+    font-size: 20px;
+    left: 10px;
+  }
+}
