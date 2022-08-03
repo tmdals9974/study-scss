@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
   "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+  "ignoreFiles": "./style.css*",
   "rules": {
     "max-line-length": 120,
     "prettier/prettier": true,
