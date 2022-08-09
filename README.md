@@ -4,7 +4,9 @@
 
 ## 정리 자료
 
+- [팁 정리](docs/Tip.md)
 - [피그마 매뉴얼](docs/FigmaManual.md)
+- [SCSS 매뉴얼](docs/ScssManual.md)
 - [이미지 확장자](docs/ImageExtension.md)
 - [아이콘 폰트](docs/IconFont.md)
 - [파비콘 생성](docs/GenerateFavicon.md)
