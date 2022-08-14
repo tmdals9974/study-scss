@@ -791,10 +791,13 @@ i {
 .gnb-nav-list {
   align-items: center;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  margin-left: -8px; }
 
 .gnb-nav-item {
-  margin-right: 24px; }
+  margin-right: 8px; }
+  .gnb-nav-item.is-active a, .gnb-nav-item:hover a {
+    color: #3da5f5; }
   .gnb-nav-item:last-child {
     margin-right: 0; }
   .gnb-nav-item a {
@@ -802,7 +805,29 @@ i {
     letter-spacing: -0.02em;
     line-height: 28px;
     color: #3f4150;
-    font-weight: 700; }
+    display: block;
+    font-weight: 700;
+    padding: 8px; }
+
+/**
+ * 해당 파일은 gnb-icon-button의 고유한 속성만을 보관함.
+ * margin과 같은 타 컴포넌트와의 상호작용 속성은 layout에 보관.
+**/
+.gnb-icon-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #8c8d96;
+  font-size: 24px;
+  height: 32px;
+  transition: color 200ms ease-in-out;
+  width: 32px; }
+  .gnb-icon-button.is-menu {
+    color: #3da5f5; }
+    .gnb-icon-button.is-menu:active {
+      color: #3186c4; }
+  .gnb-icon-button:active {
+    color: #3f4150; }
 
 /* stylelint-disable scss/dollar-variable-first-in-block */
 /*
@@ -925,19 +950,8 @@ i {
     align-items: center;
     display: flex;
     justify-content: flex-end; }
-  .gnb-right .gnb-search-button {
+  .gnb-right .gnb-icon-button.is-search {
     margin-right: 4px; }
-  .gnb-icon-button {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 32px;
-    width: 32px; }
-    .gnb-icon-button i {
-      color: #8c8d96;
-      font-size: 24px; }
-  .gnb-menu-button i {
-    color: #3da5f5; }
   .gnb .logo {
     left: 50%;
     position: absolute;
