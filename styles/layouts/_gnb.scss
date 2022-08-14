@@ -12,25 +12,8 @@
       @include flexbox(end);
     }
 
-    .gnb-search-button {
+    .gnb-icon-button.is-search {
       margin-right: 4px;
-    }
-  }
-
-  &-icon-button {
-    @include flexbox;
-    height: 32px;
-    width: 32px;
-
-    i {
-      color: $secondary;
-      font-size: 24px;
-    }
-  }
-
-  &-menu-button {
-    i {
-      color: $blue;
     }
   }
 

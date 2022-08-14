@@ -1,0 +1,25 @@
+/**
+ * 해당 파일은 gnb-icon-button의 고유한 속성만을 보관함.
+ * margin과 같은 타 컴포넌트와의 상호작용 속성은 layout에 보관.
+**/
+
+.gnb-icon-button {
+  @include flexbox;
+  color: $secondary;
+  font-size: 24px;
+  height: 32px;
+  transition: color 200ms ease-in-out;
+  width: 32px;
+
+  &.is-menu {
+    color: $blue;
+
+    &:active {
+      color: $blue-dark;
+    }
+  }
+
+  &:active {
+    color: $primary;
+  }
+}
