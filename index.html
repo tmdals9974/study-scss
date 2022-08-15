@@ -64,7 +64,7 @@
                 </div>
 
                 <!-- NOTE : 로그인 했을 경우 -->
-                <!-- <div class="button-group">
+                <div class="button-group" id="authButtonGroup" style="display: none">
                   <button class="gnb-icon-button is-search lg-hidden" type="button" aria-label="검색창 열기 버튼">
                     <i class="ic-search"></i>
                   </button>
@@ -87,10 +87,10 @@
                       <img src="./assets/images/img-user-02.png" alt="유저 이미지" />
                     </div>
                   </button>
-                </div> -->
+                </div>
 
                 <!-- NOTE : 로그인 하지 않았을 경우 -->
-                <div class="button-group">
+                <div class="button-group" id="unauthButtonGroup">
                   <button class="gnb-icon-button is-search lg-hidden" type="button" aria-label="검색창 열기 버튼">
                     <i class="ic-search"></i>
                   </button>
@@ -100,7 +100,7 @@
                   </a>
 
                   <div class="gnb-auth sm-hidden">
-                    <a href="/"> 로그인 </a>
+                    <a href="javascript:login()"> 로그인 </a>
                     <a href="/"> 회원가입 </a>
                   </div>
                 </div>
@@ -115,5 +115,15 @@
         </div>
       </div>
     </header>
+
+    <script>
+      const authButtonGroup = document.getElementById('authButtonGroup')
+      const unauthButtonGroup = document.getElementById('unauthButtonGroup')
+
+      function login() {
+        authButtonGroup.style.display = 'flex'
+        unauthButtonGroup.style.display = 'none'
+      }
+    </script>
   </body>
 </html>
