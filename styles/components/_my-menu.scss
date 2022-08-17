@@ -1,0 +1,30 @@
+.my-menu {
+  position: relative;
+
+  &-content {
+    @include pos-center-x;
+  }
+
+  &-list {
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+  }
+
+  &-item {
+    a,
+    button {
+      @include flexbox(start);
+      border-radius: 2px;
+      height: 44px;
+      padding: 0 8px;
+      width: 100%;
+
+      &:hover {
+        background-color: $background;
+      }
+    }
+  }
+}
