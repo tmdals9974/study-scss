@@ -1,8 +1,30 @@
 .my-menu {
+  $tooltip-size: 12px;
   position: relative;
 
   &-content {
     @include pos-center-x;
+    border-radius: 4px;
+    box-shadow: $dropdown-shadow;
+
+    &::before,
+    &::after {
+      @include pos-center-x;
+      border-bottom: $tooltip-size solid $border;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: $tooltip-size solid transparent;
+      content: '';
+      display: block;
+      height: 0;
+      top: -#{$tooltip-size * 2};
+      width: 0;
+    }
+
+    &::after {
+      border-bottom-color: $white;
+      top: -#{$tooltip-size * 2 - 2px};
+    }
   }
 
   &-list {
