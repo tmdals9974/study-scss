@@ -9,6 +9,7 @@
     "scss/at-rule-conditional-no-parentheses": null,
     "scss/double-slash-comment-empty-line-before": null,
     "order/properties-alphabetical-order": true,
+    "color-function-notation": "legacy",
 
     "alpha-value-notation": "number",
     "at-rule-empty-line-before": null,
