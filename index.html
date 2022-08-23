@@ -139,54 +139,64 @@
       </div>
     </header>
 
-    <aside>
-      <header>
-        <h1>
+    <aside class="sidebar sm-only">
+      <header class="sidebar-header">
+        <h1 class="logo">
           <a href="/">
             <img src="/assets/images/logo.svg" alt="내일의 집" />
           </a>
         </h1>
 
         <!-- NOTE : 로그인을 한 경우 -->
-        <a href="/">
-          <div class="avatar-24">
-            <img src="./assets/images/img-user-02.png" alt="$4" />
-          </div>
+        <div class="sidebar-user">
+          <a href="/">
+            <div class="avatar-24">
+              <img src="./assets/images/img-user-02.png" alt="$4" />
+            </div>
 
-          <strong>은하아빠</strong>
-        </a>
+            <strong class="username">은하아빠</strong>
+          </a>
+        </div>
 
         <!-- NOTE : 로그인을 하지 않은 경우 -->
-        <a href="/">로그인</a>
-        <a href="/">회원가입</a>
+        <div class="sidebar-auth">
+          <a class="btn-40 btn-outlined" href="/">로그인</a>
+          <a class="btn-40 btn-primary" href="/">회원가입</a>
+        </div>
       </header>
 
-      <nav>
-        <h2>메뉴</h2>
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
 
-        <button type="button">
-          <i class="ic-store" aria-hidden></i>
-          스토어
-          <i class="ic-chevron" aria-hidden></i>
-        </button>
+        <div class="drawer-menu">
+          <button class="drawer-menu-button" type="button">
+            <i class="ic-store" aria-hidden></i>
+            스토어
+            <i class="ic-chevron" aria-hidden></i>
+          </button>
 
-        <ul>
-          <li><a href="/">스토어홈</a></li>
-          <li><a href="/">카테고리</a></li>
-          <li><a href="/">신혼가구</a></li>
-          <li>
-            <a href="/">기획전 <i class="ic-new" aria-label="New" lang="en"></i> </a>
-          </li>
-        </ul>
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item"><a href="/">스토어홈</a></li>
+              <li class="drawer-menu-item"><a href="/">카테고리</a></li>
+              <li class="drawer-menu-item"><a href="/">신혼가구</a></li>
+              <li class="drawer-menu-item">
+                <a href="/">기획전 <i class="ic-new" aria-label="New" lang="en"></i> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <!-- NOTE : 로그인을 하지 않은 경우 -->
-        <ul>
-          <li><a href="">마이페이지</a></li>
-          <li><a href="">나의 쇼핑</a></li>
-          <li><a href="">스크랩북</a></li>
-          <li><a href="">알림</a></li>
-          <li><a href="">이벤트</a></li>
-        </ul>
+        <!-- NOTE : 로그인을 한 경우 -->
+        <div class="sidebar-user-menu">
+          <ul class="user-menu-list">
+            <li class="user-menu-item"><a href="/">마이페이지</a></li>
+            <li class="user-menu-item"><a href="/">나의 쇼핑</a></li>
+            <li class="user-menu-item"><a href="/">스크랩북</a></li>
+            <li class="user-menu-item"><a href="/">알림</a></li>
+            <li class="user-menu-item"><a href="/">이벤트</a></li>
+          </ul>
+        </div>
       </nav>
     </aside>
 
