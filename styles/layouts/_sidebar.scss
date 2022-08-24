@@ -1,0 +1,59 @@
+.sidebar {
+  background-color: $white;
+  padding: 32px 20px;
+  width: 240px;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flexbox(start);
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        height: 20px;
+        width: auto;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    @include flexbox(start);
+    height: 88px;
+  }
+
+  &-user {
+    a {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      font-weight: 700;
+      width: 100%;
+    }
+
+    .avatar-24 {
+      flex-shrink: 0; // 닉네임이 길 경우, 부모의 flex 속성으로 인해 avatar의 사이즈가 줄어드는 것을 방지.
+      margin-right: 8px;
+    }
+
+    .username {
+      // ↓ truncate 설정
+      flex-grow: 1; // 공간이 남으면 username만 늘어나도록 설정. => avatar-24와 sidebar는 width가 고정이므로, username의 width도 고정됨.
+      overflow: hidden; // flex-grow 속성으로 인해 width가 정해졌기에, overflow hidden이 작동함.
+      text-overflow: ellipsis; // 넘친 텍스트에 대해 ... 처리
+      white-space: nowrap; // 길이가 넘쳐도 다음 줄로 가지 않고, 한 줄로 표시 되도록 하는 옵션.
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+
+    a {
+      width: 84px;
+    }
+  }
+}
