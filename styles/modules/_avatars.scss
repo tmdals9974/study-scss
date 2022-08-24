@@ -1,4 +1,8 @@
 %avatar-base {
+  background-image: url('./assets/images/img-user-default.png'); // 이미지가 없을 경우 기본 이미지 설정
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   border-radius: 50%;
   display: block;
   overflow: hidden;
