@@ -1,0 +1,6 @@
+.drawer-menu {
+  &-button {
+    @include text-style(18, $primary);
+    font-weight: 700;
+  }
+}
