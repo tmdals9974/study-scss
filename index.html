@@ -168,7 +168,7 @@
       <nav class="sidebar-nav">
         <h2 class="visually-hidden">메뉴</h2>
 
-        <div class="drawer-menu is-community">
+        <div class="drawer-menu is-community" onclick="drawerMenuClicked(this)">
           <button class="drawer-menu-button" type="button">
             <i class="ic-community" aria-hidden></i>
             커뮤니티
@@ -189,7 +189,7 @@
           </div>
         </div>
 
-        <div class="drawer-menu is-store is-active is-open">
+        <div class="drawer-menu is-store is-active is-open" onclick="drawerMenuClicked(this)">
           <button class="drawer-menu-button" type="button">
             <i class="ic-store" aria-hidden></i>
             스토어
@@ -213,7 +213,7 @@
           </div>
         </div>
 
-        <div class="drawer-menu is-expert">
+        <div class="drawer-menu is-expert" onclick="drawerMenuClicked(this)">
           <button class="drawer-menu-button" type="button">
             <i class="ic-expert" aria-hidden></i>
             인테리어시공
@@ -242,24 +242,36 @@
     </aside>
 
     <script>
-      const authButtonGroup = document.getElementById('authButtonGroup')
-      const unauthButtonGroup = document.getElementById('unauthButtonGroup')
-
       function login() {
+        const authButtonGroup = document.getElementById('authButtonGroup')
+        const unauthButtonGroup = document.getElementById('unauthButtonGroup')
+
         authButtonGroup.style.display = 'flex'
         unauthButtonGroup.style.display = 'none'
       }
 
-      const userProfile = document.getElementById('userProfile')
-      const myMenuContent = document.getElementById('myMenuContent')
-
       function userProfileClicked() {
+        const userProfile = document.getElementById('userProfile')
+        const myMenuContent = document.getElementById('myMenuContent')
+
         if (userProfile.classList.contains('is-active')) {
           myMenuContent.style.display = 'none'
           userProfile.classList.remove('is-active')
         } else {
           myMenuContent.style.display = ''
           userProfile.classList.add('is-active')
+        }
+      }
+
+      function drawerMenuClicked(drawerMenu) {
+        if (!drawerMenu) return
+
+        if (drawerMenu.classList.contains('is-open')) drawerMenu.classList.remove('is-open')
+        else {
+          const drawerMenus = document.getElementsByClassName('drawer-menu')
+          const drawerMenuArr = Array.from(drawerMenus)
+          drawerMenuArr.forEach((dm) => dm.classList.remove('is-open'))
+          drawerMenu.classList.add('is-open')
         }
       }
     </script>
