@@ -1,6 +1,98 @@
 .drawer-menu {
+  $drawer-menu-item-height: 36px;
+  $drawer-menu-list-padding: 8px;
+  $community-length: 8;
+  $store-length: 9;
+  $expert-length: 2;
+
+  &.is-active {
+    .drawer-menu-button {
+      color: $blue;
+    }
+  }
+
+  &.is-open {
+    .drawer-menu-button i:last-child {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.is-community {
+      .drawer-menu-content {
+        max-height: $drawer-menu-item-height * $community-length + $drawer-menu-list-padding;
+      }
+    }
+
+    &.is-store {
+      .drawer-menu-content {
+        max-height: $drawer-menu-item-height * $store-length + $drawer-menu-list-padding;
+      }
+    }
+
+    &.is-expert {
+      .drawer-menu-content {
+        max-height: $drawer-menu-item-height * $expert-length + $drawer-menu-list-padding;
+      }
+    }
+
+    .drawer-menu-list {
+      padding-bottom: $drawer-menu-list-padding;
+    }
+  }
+
   &-button {
+    @include flexbox(start);
     @include text-style(18, $primary);
     font-weight: 700;
+    height: 54px;
+    padding: 0 8px;
+    position: relative;
+    transition: color 200ms ease-in-out;
+    width: 100%;
+
+    i {
+      &:first-child {
+        color: $primary;
+        font-size: 24px;
+        margin-right: 8px;
+        position: relative; // TODO : Check
+        top: 1px; // TODO : Check
+      }
+
+      &:last-child {
+        @include pos-center-y;
+        color: $primary;
+        font-size: 16px;
+        right: 8px;
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease-in-out;
+  }
+
+  &-item {
+    &.is-active {
+      a {
+        color: $blue;
+      }
+    }
+
+    a {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      font-weight: 700;
+      height: $drawer-menu-item-height;
+      padding: 0 12px;
+      width: 100%;
+    }
+
+    .ic-new {
+      color: $red;
+      font-size: 16px;
+    }
   }
 }
