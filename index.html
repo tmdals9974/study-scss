@@ -52,7 +52,12 @@
                   </ul>
                 </nav>
 
-                <button class="gnb-icon-button is-menu sm-only" type="button" aria-label="메뉴 열기 버튼">
+                <button
+                  class="gnb-icon-button is-menu sm-only"
+                  type="button"
+                  onclick="openSidebar()"
+                  aria-label="메뉴 열기 버튼"
+                >
                   <i class="ic-menu"></i>
                 </button>
               </div>
@@ -139,7 +144,7 @@
       </div>
     </header>
 
-    <aside class="sidebar sm-only">
+    <aside class="sidebar sm-only" id="sidebar">
       <header class="sidebar-header">
         <h1 class="logo">
           <a href="/">
@@ -241,7 +246,7 @@
       </nav>
     </aside>
 
-    <div class="overlay" aria-hidden></div>
+    <div class="overlay" id="overlay" onclick="closeOverlay()" aria-hidden></div>
 
     <script>
       function login() {
@@ -275,6 +280,23 @@
           drawerMenuArr.forEach((dm) => dm.classList.remove('is-open'))
           drawerMenu.classList.add('is-open')
         }
+      }
+
+      const overlay = document.getElementById('overlay')
+      const sidebar = document.getElementById('sidebar')
+
+      function openSidebar() {
+        sidebar.classList.add('is-active')
+        openOverlay()
+      }
+
+      function openOverlay() {
+        overlay.classList.add('is-active')
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove('is-active')
+        sidebar.classList.remove('is-active')
       }
     </script>
   </body>
