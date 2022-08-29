@@ -3,6 +3,7 @@
   height: 100vh;
   left: 0;
   overflow-y: auto;
+  overscroll-behavior: contain; // overlay가 생겼을 경우, 백그라운드 스크롤을 방지해줌
   padding: 32px 20px;
   position: fixed;
   top: 0;
