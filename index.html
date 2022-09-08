@@ -92,18 +92,17 @@
                     <strong class="badge">5</strong>
                   </a>
 
-                  <div class="my-menu sm-hidden">
+                  <div class="my-menu sm-hidden" id="myMenu">
                     <button
                       class="my-menu-button"
                       type="button"
                       aria-label="마이메뉴 열기 버튼"
-                      id="userProfile"
                       onclick="userProfileClicked()"
                     >
                       <img src="./assets/images/img-user-02.png" alt="유저 이미지" />
                     </button>
 
-                    <div class="my-menu-content" id="myMenuContent" style="display: none">
+                    <div class="my-menu-content">
                       <ul class="my-menu-list">
                         <li class="my-menu-item">
                           <a href="/">마이페이지</a>
@@ -325,15 +324,12 @@
       }
 
       function userProfileClicked() {
-        const userProfile = document.getElementById('userProfile')
-        const myMenuContent = document.getElementById('myMenuContent')
+        const myMenu = document.getElementById('myMenu')
 
-        if (userProfile.classList.contains('is-active')) {
-          myMenuContent.style.display = 'none'
-          userProfile.classList.remove('is-active')
+        if (myMenu.classList.contains('is-active')) {
+          myMenu.classList.remove('is-active')
         } else {
-          myMenuContent.style.display = ''
-          userProfile.classList.add('is-active')
+          myMenu.classList.add('is-active')
         }
       }
 
