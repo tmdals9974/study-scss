@@ -11,10 +11,8 @@
     @include inline-flexbox(start);
     border-bottom: 1px solid $border;
     height: 40px;
-    left: -8px;
     margin-left: -15px;
     padding: 0 7px;
-    position: relative;
     white-space: nowrap;
   }
 
