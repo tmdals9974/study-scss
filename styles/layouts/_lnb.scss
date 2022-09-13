@@ -9,13 +9,13 @@
   }
 
   &-list {
-    @include flexbox(start);
-    width: 100%;
+    @include inline-flexbox(start);
+    left: -8px;
+    position: relative;
+    white-space: nowrap;
   }
 
   &-item {
-    flex-shrink: 0; // 공간이 부족해도 자신의 사이즈를 줄이지 않도록
-
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
