@@ -1,6 +1,5 @@
 .lnb {
   background-color: $white;
-  border-bottom: 1px solid $border;
   overflow-x: auto;
   scrollbar-width: none;
 
@@ -10,7 +9,11 @@
 
   &-list {
     @include inline-flexbox(start);
+    border-bottom: 1px solid $border;
+    height: 40px;
     left: -8px;
+    margin-left: -15px;
+    padding: 0 7px;
     position: relative;
     white-space: nowrap;
   }
@@ -19,8 +22,9 @@
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
+      border-bottom: 2px solid transparent;
+      // active 상태일 때에만 border-bottom이 생기게 되면, height가 줄어들어 좌우 요소들과 글자 정렬 높이가 안맞게 되어 추가
       font-weight: 700;
-      height: 40px;
       padding: 10px 8px;
     }
 
@@ -30,7 +34,7 @@
 
     &.is-active {
       a {
-        border-bottom: 2px solid $blue;
+        border-bottom-color: $blue;
         color: $blue;
       }
     }
