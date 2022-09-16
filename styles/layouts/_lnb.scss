@@ -1,11 +1,7 @@
 .lnb {
+  @include no-scrollbar;
   background-color: $white;
   overflow-x: auto;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &-list {
     @include inline-flexbox(start);

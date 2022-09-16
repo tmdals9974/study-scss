@@ -1,0 +1,6 @@
+@mixin no-scrollbar() {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  scrollbar-width: none;
+}
