@@ -1,4 +1,7 @@
 .lnb {
+  $lnb-height-sm: 40px;
+  $lnb-height-md: 50px;
+
   @include no-scrollbar;
   background-color: $white;
   overflow-x: auto;
@@ -6,7 +9,7 @@
   &-list {
     @include inline-flexbox(start);
     border-bottom: 1px solid $border;
-    height: 40px;
+    height: $lnb-height-sm;
     margin-left: -15px;
     padding: 0 7px;
     // margin-left와 padding의 이유 : 디자인 상, lnb-list가 grid시스템과는 달리, 화면 제일 앞에서 7px 떨어진 곳에서 시작하고 있었음.
@@ -24,13 +27,38 @@
       border-bottom: 2px solid transparent;
       // active 상태일 때에만 border-bottom이 생기게 되면, height가 줄어들어 좌우 요소들과 글자 정렬 높이가 안맞게 되어 추가
       font-weight: 700;
-      padding: 10px 8px;
+      height: $lnb-height-sm;
+      padding: 0 8px;
+
+      &:hover {
+        color: $blue;
+      }
     }
 
     &.is-active {
       a {
         border-bottom-color: $blue;
         color: $blue;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    border-bottom: 1px solid $border;
+    height: $lnb-height-md;
+    overflow-x: visible;
+
+    &-list {
+      border-bottom: 0;
+      height: auto;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    &-item {
+      a {
+        @include text-style(14);
+        height: $lnb-height-md;
       }
     }
   }
