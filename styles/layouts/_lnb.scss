@@ -13,6 +13,11 @@
     height: 40px;
     margin-left: -15px;
     padding: 0 7px;
+    // margin-left와 padding의 이유 : 디자인 상, lnb-list가 grid시스템과는 달리, 화면 제일 앞에서 7px 떨어진 곳에서 시작하고 있었음.
+    // grid시스템의 margin-left는 15px이며, lnb-list 내 item의 padding은 8px임.
+    // grid시스템의 적용을 받았다면 글자가 23px부터 시작하게 되는데, 그럼 너무 동떨어져 있으니까
+    // grid시스템에서 -8px를 해서 7px 떨어진곳부터 시작한거임.
+    // 그래야 item의 글자가 15px부터 시작하게 되니까!
     white-space: nowrap;
   }
 
