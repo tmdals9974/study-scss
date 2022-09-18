@@ -37,3 +37,4 @@
 - block: 별도의 width/height값을 주지 않을 경우, width/height는 부모의 컨텐츠 width/height의 100%
 - inline-block: 별도의 width/height값을 주지 않을 경우, width/height는 자신의 컨텐츠 width/height
 - overflow: visible하면 넘쳐도 보임, overflow의 속성값은 무조건 width/height이 지정되어있어야만 작동할 수 있음.
+- inline 요소에는 transform이 적용되지 않음. inline-block에는 적용됨.
