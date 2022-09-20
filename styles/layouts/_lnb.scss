@@ -1,7 +1,4 @@
 .lnb {
-  $lnb-height-sm: 40px;
-  $lnb-height-md: 50px;
-
   @include no-scrollbar;
   background-color: $white;
   overflow-x: auto;
