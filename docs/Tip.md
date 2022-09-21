@@ -39,3 +39,4 @@
 - overflow: visible하면 넘쳐도 보임, overflow의 속성값은 무조건 width/height이 지정되어있어야만 작동할 수 있음.
 - inline 요소에는 transform이 적용되지 않음. inline-block에는 적용됨.
 - z-index는 부모사이의 z-index가 먼저 적용됨. 부모의 z-index가 더 높으면 자식의 z-index가 낮아도 위에 표시됨.
+- transform의 translate3d 속성을 이용하면 위치 이동이 가능하며, 해당 옵션엔 transition 적용 가능 (일반 left, top등의 옵션으로는 transition 적용 불가능)
