@@ -9,4 +9,4 @@ const productCarouse = tns({
   autoplayButtonOutput: false,
   mouseDrag: true,
   preventScrollOnTouch: true,
-})
+});

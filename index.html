@@ -501,70 +501,70 @@
     <script src="/js/productCarousel.js"></script>
     <script>
       function login() {
-        const authButtonGroup = document.getElementById('authButtonGroup')
-        const unauthButtonGroup = document.getElementById('unauthButtonGroup')
+        const authButtonGroup = document.getElementById('authButtonGroup');
+        const unauthButtonGroup = document.getElementById('unauthButtonGroup');
 
-        authButtonGroup.style.display = 'flex'
-        unauthButtonGroup.style.display = 'none'
+        authButtonGroup.style.display = 'flex';
+        unauthButtonGroup.style.display = 'none';
       }
 
       function userProfileClicked() {
-        const myMenu = document.getElementById('myMenu')
+        const myMenu = document.getElementById('myMenu');
 
         if (myMenu.classList.contains('is-active')) {
-          myMenu.classList.remove('is-active')
+          myMenu.classList.remove('is-active');
         } else {
-          myMenu.classList.add('is-active')
+          myMenu.classList.add('is-active');
         }
       }
 
       function drawerMenuClicked(drawerMenu) {
-        if (!drawerMenu) return
+        if (!drawerMenu) return;
 
-        if (drawerMenu.classList.contains('is-open')) drawerMenu.classList.remove('is-open')
+        if (drawerMenu.classList.contains('is-open')) drawerMenu.classList.remove('is-open');
         else {
-          const drawerMenus = document.getElementsByClassName('drawer-menu')
-          const drawerMenuArr = Array.from(drawerMenus)
-          drawerMenuArr.forEach((dm) => dm.classList.remove('is-open'))
-          drawerMenu.classList.add('is-open')
+          const drawerMenus = document.getElementsByClassName('drawer-menu');
+          const drawerMenuArr = Array.from(drawerMenus);
+          drawerMenuArr.forEach((dm) => dm.classList.remove('is-open'));
+          drawerMenu.classList.add('is-open');
         }
       }
 
-      const overlay = document.getElementById('overlay')
-      const sidebar = document.getElementById('sidebar')
+      const overlay = document.getElementById('overlay');
+      const sidebar = document.getElementById('sidebar');
 
       function openSidebar() {
-        sidebar.classList.add('is-active')
-        openOverlay()
+        sidebar.classList.add('is-active');
+        openOverlay();
       }
 
       function openOverlay() {
-        overlay.classList.add('is-active')
+        overlay.classList.add('is-active');
       }
 
       function closeOverlay() {
-        overlay.classList.remove('is-active')
-        sidebar.classList.remove('is-active')
+        overlay.classList.remove('is-active');
+        sidebar.classList.remove('is-active');
       }
 
       function toggleSearchModal(show) {
-        const searchModal = document.getElementById('searchModal')
+        const searchModal = document.getElementById('searchModal');
         if (show) {
-          searchModal.classList.add('is-active')
+          searchModal.classList.add('is-active');
         } else {
-          searchModal.classList.remove('is-active')
+          searchModal.classList.remove('is-active');
         }
       }
 
-      const searchInput = document.getElementById('searchInput')
-      const desktopSearchHistory = document.getElementById('desktopSearchHistory')
+      const searchInput = document.getElementById('searchInput');
+      const desktopSearchHistory = document.getElementById('desktopSearchHistory');
       searchInput.addEventListener('focusin', () => {
-        desktopSearchHistory.style.display = 'block'
-      })
+        desktopSearchHistory.style.display = 'block';
+      });
 
       searchInput.addEventListener('focusout', () => {
-        desktopSearchHistory.style.display = 'none'
-      })
+        desktopSearchHistory.style.display = 'none';
+      });
     </script>
   </body>
 </html>
