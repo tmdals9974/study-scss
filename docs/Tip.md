@@ -34,8 +34,9 @@
 4. #### 스타일링
 
 - 모바일부터 순서대로 스타일을 입히며 레이아웃 배치
-- block: 별도의 width/height값을 주지 않을 경우, width/height는 부모의 컨텐츠 width/height의 100%
+- block 요소의 height: auto는 자식 요소 크기를 기준으로 설정, width: auto의 경우에는 부모 요소 크기를 기준으로 설정.
 - inline-block: 별도의 width/height값을 주지 않을 경우, width/height는 자신의 컨텐츠 width/height
+- inline-block의 width: auto는 자식 요소의 크기를 기준으로 너비를 설정하는 반면, width: 100%는 부모 요소의 크기를 기준으로 너비를 설정하기에, 부모가 auto고 자식이 100%면 오작동함.
 - overflow: visible하면 넘쳐도 보임, overflow의 속성값은 무조건 width/height이 지정되어있어야만 작동할 수 있음.
 - inline 요소에는 transform이 적용되지 않음. inline-block에는 적용됨.
 - z-index는 부모사이의 z-index가 먼저 적용됨. 부모의 z-index가 더 높으면 자식의 z-index가 낮아도 위에 표시됨.
