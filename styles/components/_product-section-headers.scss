@@ -17,17 +17,26 @@
   .text-button,
   .icon-button {
     @include pos-center-y;
-    right: 0;
+    right: -15px;
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .text-button {
     @include text-style(14, $blue);
     font-weight: 700;
+    padding: 15px;
   }
 
   .icon-button {
+    @include flexbox;
     color: $secondary;
     font-size: 22px;
+    height: 22px + (15px * 2);
+    right: -15px;
+    width: 22px + (15px * 2);
 
     &.is-right {
       transform: translateY(-50%) rotate(-90deg);
@@ -38,6 +47,13 @@
     .title,
     .badge {
       font-size: 18px;
+    }
+
+    .text-button,
+    .icon-button {
+      &:hover {
+        opacity: 0.4;
+      }
     }
 
     .text-button {
