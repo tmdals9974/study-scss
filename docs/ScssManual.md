@@ -57,7 +57,22 @@
     - #### if-else : `@if () { }` `@else if () { }` `@else { }`
 
   - ### For
+
     - @for $i from 1 through 3 { } : 1 이상, 3 이하
     - @for $i from 1 to 3 { } : 1 이상, 3 미만
 
+  - ### Debug
+    - $debug $i : 컴파일 시 $i의 값을 콘솔에 찍어줌
+
 - ## 린팅
+
+  - ### stylelint
+
+    - npm install 및 Extension install 후 사용 가능
+
+  - ### scss-lint
+
+    - Extension 및 Ruby Sass install 후 사용 가능
+
+  - ### sass-lint
+    - npm install 및 Extension install 후 사용 가능
