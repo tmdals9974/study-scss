@@ -44,3 +44,4 @@
 - tab-button과 tab-panel의 관계처럼 마크업 구조 상 서로의 연관관계를 엮을 수 없을 때 WAI ARIA ROLE을 이용 가능하다. 태그에 role 속성값을 주는 것이다(role=tablist, tab, tabpanel). 추가로 input과 label의 관계처럼, id와 aria-labelledby로 버튼과 패널을 묶어줄 수 있다.
 - display: inline 인 애들끼리 붙어있으면, 서로간에 간격이 생긴다. 그럴땐 부모에게 flex나 inline-flex를 주면 해결됨.
 - display: inline 인 애들은 padding,margin의 top/bottom 이 적용되지 않음. 줄 흐름이 방해되기 때문.
+- Table 추천 스타일 : border-collapse: collapse; table-layout: fixed;
