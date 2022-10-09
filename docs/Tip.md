@@ -45,3 +45,4 @@
 - display: inline 인 애들끼리 붙어있으면, 서로간에 간격이 생긴다. 그럴땐 부모에게 flex나 inline-flex를 주면 해결됨.
 - display: inline 인 애들은 padding,margin의 top/bottom 이 적용되지 않음. 줄 흐름이 방해되기 때문.
 - Table 추천 스타일 : border-collapse: collapse; table-layout: fixed;
+- Grid 시스템보다 범위를 넓게 하려면, (물론 Container를 안써도 되긴하지만) 클래스에 width를 별도 선언하지않고, margin에 -px를 주면 width가 넓어진다.
