@@ -66,9 +66,11 @@
 
 - ## 린팅
 
-  - ### stylelint
+  - ### [stylelint](https://stylelint.io/)
 
     - npm install 및 Extension install 후 사용 가능
+    - stylelint의 추가기능을 지원하는 lib들이 많아 원하는 기능을 찾아 모두 설치해주어야 함
+    - 다양하게 커스텀 가능하지만 오류도 많고 다루기 까다로움.
 
   - ### scss-lint
 
