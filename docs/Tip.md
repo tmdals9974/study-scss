@@ -40,6 +40,7 @@
 - overflow: visible하면 넘쳐도 보임, overflow의 속성값은 무조건 width/height이 지정되어있어야만 작동할 수 있음.
 - inline 요소에는 transform이 적용되지 않음. inline-block에는 적용됨.
 - z-index는 부모사이의 z-index가 먼저 적용됨. 부모의 z-index가 더 높으면 자식의 z-index가 낮아도 위에 표시됨.
+- z-index를 모두 선언 안했을 경우, 나중에 선언된 요소가 더 높은 우선순위를 갖게 됨.
 - transform의 translate3d 속성을 이용하면 위치 이동이 가능하며, 해당 옵션엔 transition 적용 가능 (일반 left, top등의 옵션으로는 transition 적용 불가능)
 - tab-button과 tab-panel의 관계처럼 마크업 구조 상 서로의 연관관계를 엮을 수 없을 때 WAI ARIA ROLE을 이용 가능하다. 태그에 role 속성값을 주는 것이다(role=tablist, tab, tabpanel). 추가로 input과 label의 관계처럼, id와 aria-labelledby로 버튼과 패널을 묶어줄 수 있다.
 - display: inline 인 애들끼리 붙어있으면, 서로간에 간격이 생긴다. 그럴땐 부모에게 flex나 inline-flex를 주면 해결됨.
