@@ -1,0 +1,23 @@
+/* stylelint-disable scss/dollar-variable-first-in-block */
+
+// 공통
+$gutter: 20px;
+
+// 모바일
+$sm-columns: 4;
+$sm-margin: 5px;
+
+// 태블릿
+$md-columns: 12;
+$md-margin: 30px;
+$md-max-container: 960px + ($md-margin * 2);
+
+// 데스크탑
+
+$lg-columns: 12;
+$lg-unit: 75px;
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns; // unit + gutter = column-size
+
+// grid 시스템 내부에서, grid를 벗어나 전체 너비로 확장하고 싶을 때 사용하기 위함.
+// grid margin은 $sm-margin + $gutter / 2 이기 때문에 margin에 -15px을 먹이면 전체영역임.
+$grid-margin: 15px;

@@ -32,24 +32,6 @@
  * unit                        75px
  */
 
-// 공통
-$gutter: 20px;
-
-// 모바일
-$sm-columns: 4;
-$sm-margin: 5px;
-
-// 태블릿
-$md-columns: 12;
-$md-margin: 30px;
-$md-max-container: 960px + ($md-margin * 2);
-
-// 데스크탑
-
-$lg-columns: 12;
-$lg-unit: 75px;
-$lg-max-container: ($lg-unit + $gutter) * $lg-columns; // unit + gutter = column-size
-
 .container {
   margin: 0 auto; // 화면이 넓어졌을 경우, 중앙 정렬 되고 좌우 자동 마진을 주기 위함임.
   padding: 0 $sm-margin;

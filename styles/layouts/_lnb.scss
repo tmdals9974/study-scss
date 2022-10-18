@@ -7,7 +7,7 @@
     @include inline-flexbox(start);
     border-bottom: 1px solid $border;
     height: $lnb-height-sm;
-    margin-left: -15px;
+    margin-left: -#{$grid-margin};
     padding: 0 7px;
     // margin-left와 padding의 이유 : 디자인 상, lnb-list가 grid시스템과는 달리, 화면 제일 앞에서 7px 떨어진 곳에서 시작하고 있었음.
     // grid시스템의 margin-left는 15px이며, lnb-list 내 item의 padding은 8px임.
