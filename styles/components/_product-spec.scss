@@ -48,6 +48,12 @@
   }
 
   @include responsive(T) {
+    height: auto;
+
+    .button-wrapper {
+      display: none;
+    }
+
     .product-table {
       margin-top: 40px;
     }
