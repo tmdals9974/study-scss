@@ -48,3 +48,4 @@
 - Table 추천 스타일 : border-collapse: collapse; table-layout: fixed;
 - Grid 시스템보다 범위를 넓게 하려면, (물론 Container를 안써도 되긴하지만) 클래스에 width를 별도 선언하지않고, margin에 -px를 주면 width가 넓어진다.
 - CSS 속성 브라우저별 사용 가능 여부는 [여기](https://caniuse.com/)에서 확인 가능하다. <sub><sup>\* 검색 후, 각 영역에 마우스 올리면 해당 버전의 업데이트 날짜도 보인다.</sup></sub>
+- flex-box의 자식에게는 order 속성을 부여할 수 있다. order를 통해 마크업순서와 상관없이 표시할 순서를 변경할 수 있다.
