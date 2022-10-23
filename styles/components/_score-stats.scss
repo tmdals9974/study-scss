@@ -47,4 +47,19 @@
       }
     }
   }
+
+  @include responsive(T) {
+    &-item {
+      dt {
+        margin-right: 8px;
+      }
+
+      dd {
+        .bar-graph {
+          margin-right: 8px;
+          width: 180px;
+        }
+      }
+    }
+  }
 }
