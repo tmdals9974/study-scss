@@ -68,4 +68,24 @@
       }
     }
   }
+
+  @include responsive(T) {
+    padding: 40px 0 40px 32px;
+    padding-left: 32px;
+
+    &-header {
+      margin-left: -32px;
+
+      .username {
+        @include text-style(14);
+      }
+    }
+
+    &-body {
+      p {
+        @include text-style(14);
+      }
+    }
+  }
+
 }
