@@ -88,4 +88,14 @@
     }
   }
 
+  @include responsive(D) {
+    &-header {
+      .avatar-24,
+      .username {
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
 }
