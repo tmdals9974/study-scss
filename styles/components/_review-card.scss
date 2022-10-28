@@ -42,6 +42,21 @@
   &-body {
     margin-bottom: 20px;
 
+    .review-image {
+      border-radius: 4px;
+      height: 64px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      width: 64px;
+
+      img {
+        display: block;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
     p {
       @include text-style(13, $primary);
     }
@@ -84,6 +99,12 @@
     &-body {
       p {
         @include text-style(14);
+      }
+
+      .review-image {
+        height: 112px;
+        margin-bottom: 16px;
+        width: 112px;
       }
     }
   }
