@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -wr --source-map true styles/main.scss ./style.css",
-    "stylelint": "stylelint \"**/*.scss\" --fix"
+    "lint": "stylelint \"**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
