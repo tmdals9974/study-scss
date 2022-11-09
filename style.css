@@ -745,7 +745,7 @@ address {
     .pagination .page-item a,
     .pagination .page-item button {
       min-width: 26px;
-      padding: 0 4px; }
+      padding: 0 4px 2px; }
       .pagination .page-item a:hover,
       .pagination .page-item button:hover {
         color: #3da5f5; }
@@ -1658,13 +1658,15 @@ i {
       background-color: #e0e2e7;
       border-radius: 2.5px;
       height: 5px;
+      overflow: hidden;
       width: 70px; }
       .score-stats-item dd .bar-graph .active-bar {
+        animation-duration: 1000ms;
+        animation-name: slide-active-bar;
         background-color: #3da5f5;
         border-radius: 2.5px;
         height: 5px;
-        overflow: hidden;
-        width: 30px; }
+        width: 0; }
     .score-stats-item dd .count {
       font-weight: 400; }
 
@@ -1674,6 +1676,12 @@ i {
   .score-stats-item dd .bar-graph {
     margin-right: 8px;
     width: 180px; } }
+
+@keyframes slide-active-bar {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
 
 .review-card {
   padding: 20px 0; }
@@ -1732,6 +1740,11 @@ i {
     .review-card-footer button {
       margin-right: 8px;
       width: 120px; }
+      .review-card-footer button i {
+        color: #fff;
+        font-size: 20px;
+        margin-left: -4px;
+        margin-right: 4px; }
     .review-card-footer p {
       font-size: 12px;
       letter-spacing: -0.005em;
@@ -1764,6 +1777,108 @@ i {
     .review-card-header .avatar-24:hover,
     .review-card-header .username:hover {
       opacity: 0.4; } }
+
+.product-review .review-item {
+  border-bottom: 1px solid #e0e2e7; }
+  .product-review .review-item:last-child {
+    border-bottom: 0; }
+
+.product-review .review-empty {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  color: #8c8d96;
+  padding: 36px 0;
+  text-align: center; }
+  .product-review .review-empty strong {
+    color: #3da5f5; }
+
+@media screen and (min-width: 1200px) {
+  .product-review .review-empty {
+    padding: 16px 0; } }
+
+.inquiry-card {
+  padding-bottom: 40px; }
+  .inquiry-card-header {
+    font-size: 12px;
+    letter-spacing: -0.005em;
+    line-height: 16px;
+    margin-bottom: 8px; }
+    .inquiry-card-header .detail,
+    .inquiry-card-header .misc {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start; }
+    .inquiry-card-header dd::after,
+    .inquiry-card-header strong::after {
+      content: '|';
+      margin: 0 4px; }
+    .inquiry-card-header dd:last-child::after {
+      content: none; }
+    .inquiry-card-header .detail {
+      color: #3f4150;
+      margin-bottom: 8px; }
+    .inquiry-card-header .misc {
+      color: #b2b3b9; }
+      .inquiry-card-header .misc strong {
+        font-weight: 400; }
+  .inquiry-card-body {
+    font-size: 13px;
+    letter-spacing: -0.01em;
+    line-height: 20px; }
+    .inquiry-card-body .inquiry-content {
+      padding-left: 20px;
+      position: relative; }
+      .inquiry-card-body .inquiry-content:first-child:not(:last-child) {
+        margin-bottom: 12px; }
+    .inquiry-card-body .seller {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 4px; }
+      .inquiry-card-body .seller strong {
+        margin-right: 4px; }
+      .inquiry-card-body .seller time {
+        font-size: 12px;
+        letter-spacing: -0.005em;
+        line-height: 16px;
+        color: #b2b3b9; }
+    .inquiry-card-body span {
+      color: #3da5f5;
+      font-weight: 700;
+      left: 0;
+      position: absolute;
+      top: 0; }
+    .inquiry-card-body p {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      color: #3f4150; }
+      .inquiry-card-body p i {
+        color: #b2b3b9;
+        font-size: 16px;
+        margin-right: 8px; }
+  @media screen and (min-width: 768px) {
+    .inquiry-card-header {
+      margin-bottom: 20px; }
+    .inquiry-card-body {
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      line-height: 24px; }
+      .inquiry-card-body .inquiry-content {
+        padding-left: 24px; }
+        .inquiry-card-body .inquiry-content:first-child:not(:last-child) {
+          margin-bottom: 16px; }
+      .inquiry-card-body .seller {
+        margin-bottom: 8px; }
+        .inquiry-card-body .seller strong {
+          font-size: 16px;
+          letter-spacing: -0.01em;
+          line-height: 24px; }
+      .inquiry-card-body span {
+        font-size: 16px;
+        letter-spacing: -0.01em;
+        line-height: 24px; } }
 
 /* stylelint-disable scss/dollar-variable-first-in-block */
 /*
