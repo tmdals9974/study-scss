@@ -1,0 +1,29 @@
+.product-recommendation {
+  .product-list {
+    @include flexbox(between, start);
+    flex-wrap: wrap;
+  }
+
+  .product-item {
+    width: calc(50% - 10px); // calc((100% - 20px) / 2) 와 같음
+    // 그리드 시스템 내의 전체 너비 (100%) 에서, 한 줄에 이미지가 2개.
+    // 이미지 사이의 간격 20px을 빼고 2로 나누면 이미지 하나의 크기임.
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    .product-item {
+      // 그리드 시스템 내의 전체 너비 (100%) 에서, 한 줄에 이미지가 3개.
+      // 이미지 사이의 간격 16px * 2를 빼고 3로 나누면 이미지 하나의 크기임.
+      margin-bottom: 0 !important;
+      width: calc(33.333% - 11px); // calc((100% - 32px) / 3) 와 같음
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
