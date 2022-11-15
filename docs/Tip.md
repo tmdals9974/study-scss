@@ -49,3 +49,4 @@
 - Grid 시스템보다 범위를 넓게 하려면, (물론 Container를 안써도 되긴하지만) 클래스에 width를 별도 선언하지않고, margin에 -px를 주면 width가 넓어진다.
 - CSS 속성 브라우저별 사용 가능 여부는 [여기](https://caniuse.com/)에서 확인 가능하다. <sub><sup>\* 검색 후, 각 영역에 마우스 올리면 해당 버전의 업데이트 날짜도 보인다.</sup></sub>
 - flex-box의 자식에게는 order 속성을 부여할 수 있다. order를 통해 마크업순서와 상관없이 표시할 순서를 변경할 수 있다.
+- `이미지의 종횡비를 맞출 때` (정사각형을 만들 때), 보통 wrapper의 width/height를 px로 고정하고 img에 w100%, h100%, object-fit:cover로 해결할 수 있다. 다만 `반응형일 경우` 부모의 width/height에 px를 줄 수 없고 %만 줘야하는데, width/height는 `서로의 기준점이 다르기 때문에 문제가 발생한다`. 그러나 padding, margin은 width와 기준점이 같기에, height을 0으로 주고 padding-bottom 100%를 주면 width값만큼 y축의 padding이 생기기때문에 정사각형이 완성된다. 이로써 wrapper의 스타일은 완성되었고, img에는 w100%, h100%, object-fit:cover, `left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%);` 를 주면 된다. position이 static일 경우에는 부모에 명시된 w/h값을 이용하여 안되고, absolute일 경우에는 부모의 실제 크기(패딩 포함)를 이용하기에 absolute를 써야한다. (`product-card.scss, product-recommendation.scss`)
