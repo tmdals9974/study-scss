@@ -1,12 +1,18 @@
 .product-card {
   &-image {
     border-radius: 4px;
+    height: 0;
     margin-bottom: 8px;
     overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
 
     img {
+      @include pos-center; // position이 absolute가 되면 부모의 실제 사이즈(패딩 포함)를 기준으로 함. static일 경우 명시된 값을 기준으로 함.
       display: block;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       transition: transform 200ms ease-in-out;
       width: 100%;
     }
