@@ -1,0 +1,8 @@
+/* stylelint-disable value-no-vendor-prefix */
+
+@mixin line-clamp($line) {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
