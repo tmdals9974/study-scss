@@ -1,0 +1,5 @@
+@mixin truncate() {
+  overflow: hidden; // flex-grow 속성으로 인해 width가 정해졌기에, overflow hidden이 작동함.
+  text-overflow: ellipsis; // 넘친 텍스트에 대해 ... 처리
+  white-space: nowrap; // 길이가 넘쳐도 다음 줄로 가지 않고, 한 줄로 표시 되도록 하는 옵션.
+}
