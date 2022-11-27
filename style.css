@@ -2075,6 +2075,47 @@ i {
       font-weight: 700;
       padding-right: 8px; }
 
+.user-gallery {
+  margin: 0 -15px; }
+  .user-gallery-slider {
+    margin-bottom: 4px; }
+  .user-gallery .thumbnail-list {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2px; }
+  .user-gallery .thumbnail-item {
+    margin-right: 4px; }
+    .user-gallery .thumbnail-item.tns-nav-active button {
+      border: 3px solid #3da5f5; }
+    .user-gallery .thumbnail-item:last-child {
+      margin-right: 0; }
+    .user-gallery .thumbnail-item button {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 4px;
+      height: 64px;
+      overflow: hidden;
+      width: 64px; }
+      .user-gallery .thumbnail-item button img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%; }
+  @media screen and (min-width: 768px) {
+    .user-gallery {
+      margin: 0; }
+      .user-gallery-slider {
+        margin-bottom: 6px; }
+      .user-gallery .thumbnail-list {
+        padding-left: 0; }
+      .user-gallery .thumbnail-item {
+        margin-right: 6px; }
+        .user-gallery .thumbnail-item button {
+          height: 75px;
+          width: 75px; } }
+
 /* stylelint-disable scss/dollar-variable-first-in-block */
 /*
  * MOBILE (< 768px) -----------------------------------------------------
