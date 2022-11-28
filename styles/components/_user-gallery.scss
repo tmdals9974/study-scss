@@ -4,6 +4,48 @@
 
   &-slider {
     margin-bottom: 4px;
+    position: relative;
+  }
+
+  &-controls {
+    @include flexbox(between);
+    @include pos-center;
+    padding: 0 52px;
+    width: 100%;
+
+    .control-button {
+      @include flexbox;
+      background-color: $white;
+      border-radius: 50%;
+      color: $primary;
+      font-size: 28px;
+      height: 40px;
+      transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+      width: 40px;
+
+      &.is-prev {
+        i {
+          margin-left: -2px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &.is-next {
+        i {
+          margin-right: -2px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+
+      &[disabled] {
+        visibility: hidden;
+      }
+    }
   }
 
   .thumbnail-list {
