@@ -49,6 +49,7 @@
 
   @include responsive(T) {
     height: auto;
+    padding-top: 0;
 
     .button-wrapper {
       display: none;
