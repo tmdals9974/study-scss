@@ -5,6 +5,9 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   display: none;
   left: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding-top: 16px;
   position: fixed;
   width: 100%;
@@ -16,9 +19,12 @@
     display: block;
   }
 
-  .order-checkouts,
-  .order-summary {
+  .order-checkouts {
     margin-bottom: 16px;
+  }
+
+  .order-summary {
+    margin-bottom: 48px + (4px * 2) + 16px;
   }
 
   .order-inputs {
@@ -26,8 +32,12 @@
   }
 
   .button-group {
+    background-color: $white;
+    bottom: 0;
+    left: 0;
     padding: 4px;
-    padding-top: 0;
+    position: fixed;
+    width: 100%;
   }
 
   @include responsive(T) {
