@@ -1621,7 +1621,8 @@
           <i class="ic-bookmark-filled" aria-hidden></i>
           <span aria-label="북마크 18,303회">18,303</span>
         </button> -->
-        <button class="btn-primary btn-48" type="button">구매하기</button>
+
+        <button class="btn-primary btn-48" type="button" onclick="showOrderFormModal()">구매하기</button>
       </div>
     </main>
 
@@ -1827,7 +1828,7 @@
       </div>
     </aside>
 
-    <aside class="order-form-modal lg-hidden">
+    <aside class="order-form-modal lg-hidden" id="orderFormModal">
       <h1 class="visually-hidden">주문창</h1>
 
       <form class="order-form" action="/" method="POST">
@@ -1951,6 +1952,7 @@
 
       const overlay = document.getElementById('overlay');
       const sidebar = document.getElementById('sidebar');
+      const orderFormModal = document.getElementById('orderFormModal');
 
       function openSidebar() {
         sidebar.classList.add('is-active');
@@ -1964,6 +1966,7 @@
       function closeOverlay() {
         overlay.classList.remove('is-active');
         sidebar.classList.remove('is-active');
+        orderFormModal.classList.remove('is-open');
       }
 
       function toggleSearchModal(show) {
@@ -1997,6 +2000,11 @@
       function toggleShipment(isOpen) {
         if (isOpen) document.getElementById('product-shipment').classList.add('is-open');
         else document.getElementById('product-shipment').classList.remove('is-open');
+      }
+
+      function showOrderFormModal() {
+        orderFormModal.classList.add('is-open');
+        openOverlay();
       }
     </script>
   </body>
