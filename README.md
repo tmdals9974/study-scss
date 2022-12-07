@@ -1,6 +1,6 @@
 # Study Publishing With SCSS ![Generic badge](https://img.shields.io/badge/nodejs-v12.18.2-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v6.14.5-blue.svg)
 
-**공부 기간 :** 2022.07.25 ~
+**공부 기간 :** 2022.07.25 ~ 2022.12.05
 
 ## 정리 자료
 
