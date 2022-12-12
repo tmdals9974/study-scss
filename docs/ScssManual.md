@@ -78,3 +78,6 @@
 
   - ### sass-lint
     - npm install 및 Extension install 후 사용 가능
+
+- ## 추가 정보
+  - ### [@import 대신 @use 사용](https://story.pxd.co.kr/1649)
