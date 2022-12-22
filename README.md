@@ -14,10 +14,6 @@
 
 ![Generic badge](https://img.shields.io/badge/nodejs-v12.18.2-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v6.14.5-blue.svg)
 
-```bash
-npm install -g parcel-bundler@1.12.5
-```
-
 ## 📝정리 자료
 
 - [팁 정리](docs/Tip.md)
