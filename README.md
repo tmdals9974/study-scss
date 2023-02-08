@@ -30,3 +30,7 @@
 - [Stylelint SCSS 적용](https://dev-yakuza.posstree.com/ko/linter/stylelint/#scss%EB%A5%BC-%EC%9C%84%ED%95%9C-stylelint)
 - [Stylelint + Prettier](https://github.com/prettier/stylelint-prettier)
 - [VSCode setting - formatOnSave, codeActionsOnSave](https://velog.io/@kyusung/eslint-prettier)
+
+## ✅강의 후기
+
+- 강사님이 오늘의집 클론디자인을 피그마로 만들어서 제공해주시고, 해당 피그마를 토대로 퍼블리싱을 배우는 강의이다. 요새 가장 많이 쓰이는 툴이 피그마인 만큼, 퍼블리싱 뿐만 아니라 `피그마를 다루는 방법`을 배울 수 있는 것도 큰 장점이다. 추가로 `디자이너의 의도를 읽는 방법`, `그리드 시스템 구축 방법` 등 **단순 마크업과 스타일링 강의가 아닌, 디자이너와 협업하는 방법을 알려주는 퍼블리셔를 위한 강의**이다.
